@@ -1,0 +1,195 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00695c;
+    color: white;
+    padding: 10px;
+  }
+  
+  .content {
+    display: flex;
+    margin-top: 0px;
+  }
+  
+  .filters {
+    width: 20%;
+    background-color: #e0f2f1;
+    padding: 10px;
+  }
+  
+  .search-results {
+    width: 80%;
+    padding: 10px;
+    height: 600px;;
+overflow-y: scroll;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #009688;
+    color: white;
+  }
+  
+  .pagination {
+    margin-top: 10px;
+    text-align: right;
+    padding: 0 0 20px 0;
+    float: right;
+  }
+  .filter-section {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00695c; 
+    margin-bottom: 20px;
+  }
+  
+  .filter-item {
+    margin-bottom: 20px;
+  }
+  
+  .filter-item label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #004d40; 
+  }
+  
+  .filter-item select,
+  .filter-item input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #b2dfdb; 
+    border-radius: 4px;
+    background-color: #ffffff; 
+    color: #004d40; 
+    margin-bottom: 10px;
+  }
+  
+  .filter-item input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  button {
+    background-color: #00695c; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    // width: 100%;
+
+    margin-top: 10px;
+  }
+  .paginbationText{
+    padding: 15px;
+  }
+  button:hover {
+    background-color: #004d40;
+  }
+  
+  button:disabled {
+    background-color: #b2dfdb; 
+    cursor: not-allowed;
+  }
+   
+.fadeScreen{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  background-color: #000000;
+  opacity: 80%;
+}
+.dot2-container {
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  animation: spin 1.3s infinite linear;
+}
+
+.dot2 {
+  position: absolute;
+  left: calc(50% - 25% / 2);
+  height: 100%;
+  width: 25%;
+}
+
+.dot2:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: rgb(163, 243, 255);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.dot2:nth-child(1) {
+  transform: rotate(120deg);
+}
+
+.dot2:nth-child(1)::after {
+  animation: wobble 1.3s infinite ease-in-out;
+}
+
+.dot2:nth-child(2) {
+  transform: rotate(-120deg);
+}
+
+.dot2:nth-child(2)::after {
+  animation: wobble 1.3s infinite ease-in-out;
+}
+
+.dot2:nth-child(3)::after {
+  animation: wobble 1.3s infinite ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(65%);
+  }
+}
+

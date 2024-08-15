@@ -1,0 +1,66 @@
+
+<div class="fadeScreen loaderScreen">
+</div>
+<div class="dot2-container loaderScreen">
+        <div class="dot2"></div>
+        <div class="dot2"></div>
+        <div class="dot2"></div>
+      </div>
+<div class="character-container">
+    <div class="character-header">
+      <h1>STAR WARS</h1>
+      <span>The SWAPI Project</span>
+    </div>
+  
+    <div class="character-content">
+      <div class="character-sidebar">
+        <div class="character-image">
+          <img src="../../../assets/images/star.png" alt="Character Image">
+        </div>
+        <div class="character-info">
+          <p><strong>Name:</strong> {{character.name}}</p>
+          <p><strong>Birth Year:</strong> {{character.birth_year}}</p>
+          <p><strong>Gender:</strong> {{character.gender}}</p>
+          <p><strong>Height:</strong> {{character.height}}cm</p>
+          <p><strong>Weight:</strong> {{character.mass}}kg</p>
+          <p><strong>Created At:</strong> {{character.created | date:'medium'}}</p>
+          <p><strong>Edited At:</strong> {{character.edited | date:'medium'}}</p>
+          <p><strong>Hair Color:</strong> {{character.hair_color}}</p>
+          <p><strong>Skin Color:</strong> {{character.skin_color}}</p>
+          <p><strong>Eye Color:</strong> {{character.eye_color}}</p>
+          <p><strong>Homeworld:</strong> {{character.homeworldName}}</p>
+          <p><strong>Species:</strong> {{character.speciesNames}}</p>
+        </div>
+      </div>
+  
+      <div class="character-details">
+        <div class="detail-section">
+          <h2>FILMS</h2>
+          <div class="detail-cards">
+            <div class="detail-card" *ngFor="let film of character.filmnames">
+              {{ film }}
+            </div>
+          </div>
+        </div>
+  
+        <div class="detail-section">
+          <h2>VEHICLES</h2>
+          <div class="detail-cards">
+            <div class="detail-card" *ngFor="let vehicle of character.vehiclenames">
+              {{ vehicle }}
+            </div>
+          </div>
+        </div>
+  
+        <div class="detail-section">
+          <h2>STARSHIPS</h2>
+          <div class="detail-cards">
+            <div class="detail-card" *ngFor="let starship of character.starshipnames">
+              {{ starship }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

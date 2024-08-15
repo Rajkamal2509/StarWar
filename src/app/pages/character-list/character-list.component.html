@@ -1,0 +1,96 @@
+
+
+
+<div class="fadeScreen loaderScreen">
+</div>
+<div class="dot2-container loaderScreen">
+        <div class="dot2"></div>
+        <div class="dot2"></div>
+        <div class="dot2"></div>
+      </div>
+<div class="header">
+    <h1>STAR WARS</h1>
+    <span>THE SWAPI PROJECT</span>
+  </div>
+  
+  <div class="content">
+    <div class="filters">
+        <div class="filter-section">
+            <h3>Filters</h3>
+          
+            <div class="filter-item">
+              <label for="movie">Movie Name</label>
+              <select id="movie" [(ngModel)]="selectedMovie" (change)="applyFilters()">
+                <option value="">All</option>
+                <option *ngFor="let movie of movies" [value]="movie.url">{{ movie.title }}</option>
+              </select>
+            </div>
+          
+            
+            <div class="filter-item">
+              <label for="species">Species</label>
+              <select id="species" [(ngModel)]="selectedSpecies" (change)="applyFilters()">
+                <option value="">All</option>
+                <option *ngFor="let species of speciesList" [value]="species.url">{{ species.name }}</option>
+              </select>
+            </div>
+          
+            
+            <div class="filter-item">
+              <label for="vehicle">Vehicle</label>
+              <select id="vehicle" [(ngModel)]="selectedVehicle" (change)="applyFilters()">
+                <option value="">All</option>
+                <option *ngFor="let vehicle of vehicles" [value]="vehicle.url">{{ vehicle.name }}</option>
+              </select>
+            </div>
+          
+           
+            <div class="filter-item">
+              <label for="starship">Star Ships</label>
+              <select id="starship" [(ngModel)]="selectedStarship" (change)="applyFilters()">
+                <option value="">All</option>
+                <option *ngFor="let starship of starships" [value]="starship.url">{{ starship.name }}</option>
+              </select>
+            </div>
+          
+           
+          
+            <button (click)="Search()">Search</button>
+          </div>
+          
+    </div>
+    
+    <div class="search-results">
+        <div>
+            <h2 style="color:#00695c ;">Search Results</h2>
+          
+            <table>
+              <thead>
+                <tr>
+                  <th>Sl No.</th>
+                  <th>Character Name</th>
+                  <th>Species</th>
+                  <th>Birth Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let character of filteredCharacters; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td (click)="characterdetail(character)">{{ character.name }}</td>
+                  <td>{{ character.speciesNames }}</td>
+                  <td>{{ character.birth_year }}</td>
+                </tr>
+              </tbody>
+            </table>
+          
+            <div class="pagination">
+              <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+              <span class="paginbationText">{{ currentPage }}</span>
+              <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+            </div>
+          </div>
+          
+
+    </div>
+  </div>
+  

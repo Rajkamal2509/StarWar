@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+body{
+    font-family: "Source Sans 3", sans-serif !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.imgwidth{
+    width: 250px !important;
+    margin-top: 10px !important;
+    margin-bottom:10px !important;
+  }
+h3,h4,h5{
+    font-weight: 600!important;
+    margin-bottom: .5rem!important;
+    margin-top: 1rem!important;
+}
+.layer-wrap{
+  background-color: #ffffff;
+}
+  .ulist{
+    padding-left: 20px;
+    margin-bottom: 0.4rem !important;
+  }
+  .paragraphIntent{
+    margin-bottom: 0.3rem !important;
+  }
+
+  .ulists{
+    margin-bottom: 0.4rem !important;
+  }
+  .lineindent{
+    margin-left: 10px !important;
+  }
+  .orderedListText{
+    margin-left: 20px!important;
+    margin-bottom: 0.1rem!important;
+  }
+  .unorderedText{
+    margin-bottom: 0.1rem !important;
+  }
+
+
+  .table-scroller{
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .table-scroller::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    
+  }
+  
+  /* Track */
+  .table-scroller::-webkit-scrollbar-track {
+    background: #ffffff;
+    height: 5px;
+    cursor: pointer;
+  }
+  
+  /* Handle */
+  .table-scroller::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 6px;
+    width: 5px;
+    cursor: pointer;
+  }
+  
+  /* Handle on hover */
+  .table-scroller::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: pointer;
+  }
+//   li{
+//     padding-left: 55px !important;
+//   }
+.layer-wrap{
+  width: 75vw;
+  background-color: #ffffff;
+}
+
+
+@media screen and (max-width: 600px) {
+  .layer-wrap{
+    width: 90vw;
+    background-color: #ffffff;
+  }
+}

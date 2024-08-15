@@ -1,0 +1,300 @@
+:root{
+  --receiver-msg-bg:#FFFFFF;
+  --sender-msg-bg:#1C51EE;
+}
+
+/* <------- Sidebar --------> */
+body{
+  overflow: hidden;
+  font-family: 'Roboto';
+}
+.sidebar-container{
+  /* background-color: rgb(255, 255, 255); */
+  width: 400px;
+  height: 100vh;
+  position: relative;
+}
+.pb-5vh{
+  padding-left: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 3.5rem  !important;
+}
+.top_bar{
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  border-bottom: 2px solid rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top_bar .logo{
+  width: 55px;
+}
+.bottom_area{
+ 
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
+}
+.bottom_area .profile{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+}
+.User_profile{
+  padding: 10px 20px;
+  background-color: #fff;
+  border-top: 2px solid rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settings{
+  padding: 20px;
+  background-color: #fff;
+}
+.history_area{
+ overflow-y: scroll;
+  height:90vh;
+}
+.history_area::-webkit-scrollbar {
+  display: none;
+}
+.history_item{
+  list-style: none;
+  padding: 20px;
+}
+
+/* <------  Chat area -------> */
+
+.Chat-container{
+  background-color: #EFF3F6;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.header{
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  border-bottom: 2px solid rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu:hover{
+  cursor: pointer;
+}
+
+.starter_prompts{
+  margin-top: 40px;
+ 
+  height: 70vh;
+  position: relative;
+}
+.inner_box{
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  top: 50%;
+}
+.default_card{
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  height: 100px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.prompter_area{
+  height: 80vh;
+  overflow-y: scroll;
+  padding-top: 30px;
+}
+.prompter_area::-webkit-scrollbar {
+  display: none;
+}
+
+.msg-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.sender_msg{
+  display: flex;
+  margin-bottom: 35px;
+}
+.sender_msg .msg-img{
+  margin: 0 15px 0 0 ;
+  border: 2px solid var(--sender-msg-bg);
+}
+.receiver_msg{
+  display: flex;
+  margin-bottom: 35px;
+}
+.msg-bubble {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  width: 100% !important;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  background: var(--sender-msg-bg);
+}
+.More_Outlined{
+  
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 32 !important;
+  font-size: 36px !important; 
+}
+.More_icon:hover{
+  cursor: pointer;
+}
+.receiver_msg {
+  flex-direction: row-reverse;
+}
+.receiver_msg .msg-bubble {
+  background: var(--receiver-msg-bg);
+  color: #000;
+  border-bottom-right-radius: 0;
+  position: relative;
+}
+.receiver_msg .msg-img {
+  
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  padding: 20px;
+  background-size: 60%;
+  background-color: white;
+  margin: 0 0 0 15px;
+}
+.image_box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.img_res{
+  max-width: 100%;
+  height: auto;
+}
+
+.left-msg .msg-bubble {
+  border-bottom-left-radius: 0;
+}
+.like_dislike{
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  display: flex;
+  padding-bottom: 15px;
+}
+.like_btn{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #EFF3F6;
+}
+.dislike_btn{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #EFF3F6;
+}
+.input_area{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.input_msg{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+.send_btn{
+  display: flex;
+  position: absolute;
+  top: 0;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  padding: 15px 20px;
+  right: 10px;
+  align-items: center;
+  background-color: #F18F27;
+}
+
+.outlined_send {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 24;
+color: white;
+}
+.scanner{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 70px;
+  padding: 15px 20px;
+}
+.scanner:hover{
+  cursor: pointer;
+}
+.outlined_scanner{
+
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 24;
+color: rgb(149, 149, 149);
+}
+.mic:hover{
+  cursor: pointer;
+}
+.mic{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 130px;
+  padding: 15px 20px;
+}
+.outlined_mic{
+  font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 24;
+color: rgb(149, 149, 149);
+}

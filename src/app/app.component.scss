@@ -1,0 +1,65 @@
+.shadow_div {
+    z-index: 19;
+    opacity: 0.8;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    overflow: hidden;
+    display: block;
+    background: #000;
+  }
+
+  .internet_div{
+    // position: relative;
+    // background: teal;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // height: auto;
+    // margin: 0;
+    // min-height: 24em;
+  }
+  .fixed {
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+.card{
+    padding: 1em;
+    background: #fff;
+    width: auto;
+    /* min-height: auto; */
+    height: auto;
+    p{
+        font-family: 'GillSans_Regular',sans-serif;
+        width: 99%;
+        margin: 0;
+        text-align: center;
+    }
+
+}
+
+// .ok_btn{
+//     display: flex;
+//     justify-content: center;
+//     button{
+//         color: #fff;
+//         padding: 5px 40px;
+//         border: none;
+//         background-color: #a02028;
+//         outline: none;
+//         border-radius: 10px;
+//         font-family: 'GillSans_Regular',sans-serif;
+//     }
+// }
